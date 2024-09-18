@@ -27,6 +27,8 @@ header {
     background-color: var(--primary-color);
     /*alinha o texto ao centro*/
     text-align: center;
+    /*spaçamento interno*/
+    padding: 1px;
 }
 
 h1 {
@@ -36,5 +38,32 @@ h1 {
     color: var(--bg-color);
     /*peso da fonte*/
     font-weight: 700;
+}
+
+nav {
+    /*disposição do elementos*/
+    display: flex;
+    /*alinhar os elemento ao centro*/
+    justify-content: center;
+    /*Peo da fonte*/
+    font-weight: 400;
+}
+
+nav a {
+    /*decoração da fonte*/
+    text-decoration: none;
+    /*cor da fonte*/
+    color: var(--bg-color);
+    /*margem: equerda cima direito baixo*/
+    margin: 0 2rem 1rem 0;
+    /**/
+    font-size: 1.2rem;
+}
+/*efeito adicionado quando o ouise paar sbre o links dentro da tag nav*/
+nav a:hover{
+    /*adiciona um underline*/
+text-decoration: underline;
+/*diminui o tamanho da fonte*/
+transform: scale(0.90);
 }
 /*Tempo 6:30*/
