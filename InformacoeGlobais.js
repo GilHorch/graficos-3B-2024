@@ -13,8 +13,10 @@ const paragrafo=document.createElement('p');//criar um elemento de parágrafo
 
 paragrafo.classList.add('graficos-container__texto');//adiciona uma clase do CSS ao parégrafo
 
-/*insere o texto "Você sabia que o mundo tem "+total_pessoas_mundo */
-paragrafo.innerHTML=`Você sabia que o mundo tem ${dados.total_pessoas_mundo}`
+/*insere o texto "Você sabia que o mundo tem "+total_pessoas_mundo ...*/
+paragrafo.innerHTML=`Você sabia que o mundo tem ${dados.total_pessoas_mundo} de pesoas
+e que aproximadamente ${dados.total_pessoas_conectadas}estão conectadas em alguma
+rede social e passam em média${dados.tempo_medio} horas conectadas.`
 
 
 
