@@ -17,8 +17,9 @@ paragrafo.classList.add('graficos-container__texto');//adiciona uma clase do CSS
 paragrafo.innerHTML=`Você sabia que o mundo tem ${dados.total_pessoas_mundo} de pesoas
 e que aproximadamente ${dados.total_pessoas_conectadas}estão conectadas em alguma
 rede social e passam em média${dados.tempo_medio} horas conectadas.`
-
-
+//cria a variável "container", seleciona o ID "graficos-container" na section do HTML 
+const container= document.getElementById('graficos-container');
+container.appendChild(paragrafo);//insere o paragrafo dentro do "container"
 
 }
 visualizarInformacoesGlobais();//chama a função 
