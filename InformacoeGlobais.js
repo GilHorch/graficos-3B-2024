@@ -7,7 +7,7 @@ todos os dados sejam enviadoss*/
 async function visualizarInformacoesGlobais(params) {
     //contante que armazena uma repossta  await=espera ////fetch=faz a requisição
     const res = await fetch(url);
-    const daos = await res.json();//espera as reposta erem convertidas em JSON
+    const dados = await res.json();//espera as reposta erem convertidas em JSON
 console.log(dados);
 }
-visualizarInformacoesGlobais();
+visualizarInformacoesGlobais();//chama a função 
