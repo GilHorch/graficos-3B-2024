@@ -8,7 +8,7 @@ async function visualizarInformacoesGlobais(params) {
     //contante que armazena uma repossta  await=espera ////fetch=faz a requisição
     const res = await fetch(url);
     const dados = await res.json();//espera as reposta erem convertidas em JSON
-const pesoasConectadas=(dados.total_pessoas_conectadas/1e9);//cria uma variável, pega os "dados.total_pessoas_conectadas" e divide um bilhão
+const pessoasConectadas=(dados.total_pessoas_conectadas/1e9);//cria uma variável, pega os "dados.total_pessoas_conectadas" e divide um bilhão
 const pessoasNoMundo=(dados.total_pessoas_mundo/1e9)
 const horas= parseInt(dados.tempo_medio)//cria uma variável que utiliza apenas a parte inteira do numero de horas
 //cria ua variável que utiliza apenas os minuto das horas faz o arredondamento com a função "Math.round()"
@@ -22,8 +22,8 @@ paragrafo.classList.add('graficos-container__texto');//adiciona uma clase do CSS
 
 /*insere o texto "Você sabia que o mundo tem "+total_pessoas_mundo ...*/
 paragrafo.innerHTML=`Você sabia que o mundo tem <span> ${pessoasNoMundo}bilhões </span> de pesoas
-e que aproximadamente <span>${pesoasConectadas} bilhões </span>  estão conectadas em alguma
-rede social e passam em média <span>${horas}</span> horas e ${minutos} minutos conectadas.`
+e que aproximadamente <span>${pessoasConectadas} bilhões </span>  estão conectadas em alguma
+rede social e passam em média <span>${horas} horas</span> e   <span> ${minutos} minutos</span> conectadas.`
 //cria a variável "container", seleciona o ID "graficos-container" na section do HTML 
 const container= document.getElementById('graficos-container');
 container.appendChild(paragrafo);//insere o paragrafo dentro do "container"
