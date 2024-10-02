@@ -8,7 +8,7 @@ async function quantidadeUsuarios() {
     //espera as reposta serem convertidas em JSON
     const dados = await res.json();
 
-    console.log(dados);
+    console.log(dados);//mostra os valores armazenados na variável dados 
 
     const nomeDasRedes = Object.keys(dados);
     const quantidadeUsuarios = Object.values(dados);
