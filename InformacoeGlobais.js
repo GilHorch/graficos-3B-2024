@@ -9,7 +9,7 @@ async function visualizarInformacoesGlobais(params) {
     const res = await fetch(url);
     const dados = await res.json();//espera as reposta erem convertidas em JSON
 const pessoasConectadas=(dados.total_pessoas_conectadas/1e9);//cria uma variável, pega os "dados.total_pessoas_conectadas" e divide um bilhão
-const pessoasNoMundo=(dados.total_pessoas_mundo/1e9)
+const pessoasNoMundo=(dados.total_pessoas_mundo/1e9).toFixed(1);
 const horas= parseInt(dados.tempo_medio)//cria uma variável que utiliza apenas a parte inteira do numero de horas
 //cria ua variável que utiliza apenas os minuto das horas faz o arredondamento com a função "Math.round()"
 const minutos= Math.round((dados.tempo_medio-horas)*60); 
@@ -22,7 +22,7 @@ const paragrafo=document.createElement('p');//criar um elemento de parágrafo
 paragrafo.classList.add('graficos-container__texto');//adiciona uma clase do CSS ao parégrafo
 
 /*insere o texto "Você sabia que o mundo tem "+total_pessoas_mundo ...*/
-paragrafo.innerHTML=`Você sabia que o mundo tem <span> ${pessoasNoMundo}bilhões </span> de pesoas
+paragrafo.innerHTML=`Você sabia que o mundo tem <span> ${pessoasNoMundo} bilhões </span> de pesoas
 e que aproximadamente <span>${pessoasConectadas} bilhões </span>  estão conectadas em alguma
 rede social e passam em média <span>${horas} horas</span> e <span> ${minutos} minutos</span> conectadas.<br>
 Isso significa que aproximadamente <span>${porcentagem}%</span> de pessoas estão conctadas em alguma rede social
