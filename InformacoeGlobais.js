@@ -8,13 +8,13 @@ async function visualizarInformacoesGlobais(params) {
     //contante que armazena uma repossta  await=espera ////fetch=faz a requisição
     const res = await fetch(url);
     const dados = await res.json();//espera as reposta erem convertidas em JSON
-const pessoasConectadas=(dados.total_pessoas_conectadas/1e9);//cria uma variável, pega os "dados.total_pessoas_conectadas" e divide um bilhão
+const pessoasConectadas=(dados.total_pessoas_conectadas/1e9).toFixed(1);//cria uma variável, pega os "dados.total_pessoas_conectadas" e divide um bilhão
 const pessoasNoMundo=(dados.total_pessoas_mundo/1e9).toFixed(1);
 const horas= parseInt(dados.tempo_medio)//cria uma variável que utiliza apenas a parte inteira do numero de horas
 //cria ua variável que utiliza apenas os minuto das horas faz o arredondamento com a função "Math.round()"
 const minutos= Math.round((dados.tempo_medio-horas)*60); 
 //cria uma variável que calcula o percentual de pessoas conectadas no mundo e fixa para exibir com duas casas decimais
-const porcentagem =((pessoasConectadas/pessoasNoMundo)*100).toFixed(2);
+const porcentagem =((pessoasConectadas/pessoasNoMundo)*100).toFixed(1);
 
 console.log(dados);//visualizar as informações no cosole
 const paragrafo=document.createElement('p');//criar um elemento de parágrafo
