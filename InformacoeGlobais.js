@@ -25,9 +25,8 @@ paragrafo.classList.add('graficos-container__texto');//adiciona uma clase do CSS
 paragrafo.innerHTML=`Você sabia que o mundo tem <span> ${pessoasNoMundo} bilhões </span> de pesoas
 e que aproximadamente <span>${pessoasConectadas} bilhões </span>  estão conectadas em alguma
 rede social e passam em média <span>${horas} horas</span> e <span> ${minutos} minutos</span> conectadas.<br>
-Isso significa que aproximadamente <span>${porcentagem}%</span> de pessoas estão conctadas em alguma rede social
-
-
+Isso significa que aproximadamente <span>${porcentagem}%</span> 
+de pessoas estão conctadas em alguma rede social
 
 `
 //cria a variável "container", seleciona o ID "graficos-container" na section do HTML 
