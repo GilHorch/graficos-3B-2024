@@ -79,16 +79,16 @@ nav a:hover {
 }
 
 .graficos-container__texto {
-    /**/
+    /*tamanhoda fonte*/
     font-size: 1.3rem;
 
-    /**/
+    /*alinhamento do texrt*/
     text-align: center;
 
-    /**/
+    /*espaçamento interno*/
     padding: 2rem;
 
-    /**/
+    /*borda cor solida de 2px*/
     border: var(--secondary-color) solid 2px;
 
 }
