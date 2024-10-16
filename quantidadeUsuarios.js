@@ -11,9 +11,10 @@ async function quantidadeUsuarios() {
         {
             x: nomeDasRedes,
             y: quantidadeDeUsuarios,
-            type: 'bar'//grafico de barras
+            type:'bar'//grafico de barras
         }
     ]
+
     const grafico = document.createElement('div')//cria uma div
     grafico.className = 'grafico'//cria aclasse para a div
     //insere a div  e a classe na tag onte tem o id = "graficos-container"
