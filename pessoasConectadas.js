@@ -30,4 +30,4 @@ async function pessoasConectadas() {
 
 
 
-pesssoasConectadas();//chama a função
+pessoasConectadas();//chama a função
