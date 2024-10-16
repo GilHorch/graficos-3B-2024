@@ -5,3 +5,4 @@ async function quantidadeUsuarios() {
       
       console.log(dados)
   }
+  quantidadeUsuarios()
