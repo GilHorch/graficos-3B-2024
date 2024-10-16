@@ -4,14 +4,14 @@ async function quantidadeUsuarios() {
     const dados = await res.json()
 
     console.log(dados)
-    const nomeDasRedes = Object.keys(dados)
-    const quantidadedeUsuarios = Object.values(dados)
+    const nomeDasRedes=Object.keys(dados)
+    const quantidadedeUsuarios=Object.values(dados)
 
     const data = [
         {
             x: nomeDasRedes,
             y: quantidadeUsuarios,
-            type: 'bar'//grafico de barras
+            type:'bar'//grafico de barras
         }
     ]
 const grafico= document.createElement('div')//cria uma div
