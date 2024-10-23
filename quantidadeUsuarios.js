@@ -1,4 +1,4 @@
-import { getCSS } from"common.js" //"./common"
+import { getCSS } from "common.js" //"./common"
 
 async function quantidadeUsuarios() {
     const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json'
@@ -11,35 +11,53 @@ async function quantidadeUsuarios() {
         {
             x: nomeDasRedes,
             y: quantidadeDeUsuarios,
-            type:'bar',//grafico de barras
-            marker:{
-                color:getCSS('--primary-color')
+            type: 'bar',//grafico de barras
+            marker: {
+                color: getCSS('--primary-color')
                 //getComputedStyle(document.body).getPropertyValue('--primary-color')
             }
         }
     ]
 
-    const layout={
+    const layout = {
         //cor de fundo do gráfico
-        plot_bgcolor:getCSS('--bg-color'),
-        paper_bgcolor:getCSS('--bg-color'),
-        title:{
-            text:'Redes sociais com mais usuários no mundo',
-            x:0,
-            font:{
-                color:getCSS('--primary-color'),
-                family:getCSS('--font'),
+        plot_bgcolor: getCSS('--bg-color'),
+        paper_bgcolor: getCSS('--bg-color'),
+        title: {
+            text: 'Redes sociais com mais usuários no mundo',
+            x: 0,
+            font: {
+                color: getCSS('--primary-color'),
+                family: getCSS('--font'),
                 size: 30
             }
-            
+
         },
-        xaxis:{  tilte:{text:'Nome das redes'} },
-        yaxis:{  tilte:{text:'Nome das redes'} }
+        xaxis: {
+            tilte: {
+                text: 'Nome das redes',
+                font: {
+                    color: getCSS('--primary-color'),
+                    family: getCSS('--font'),
+                    size: 30
+                }
+            },
+        },
+        yaxis: {
+            tilte: {
+                text: 'Nome das redes',
+                font: {
+                    color: getCSS('--primary-color'),
+                    family: getCSS('--font'),
+                    size: 30
+                }
+            }
+        }
     }
     const grafico = document.createElement('div')//cria uma div
     grafico.className = 'grafico'//cria aclasse para a div
     //insere a div  e a classe na tag onte tem o id = "graficos-container"
     document.getElementById('graficos-container').appendChild(grafico)
-    Plotly.newPlot(grafico, data,layout)
+    Plotly.newPlot(grafico, data, layout)
 }
 quantidadeUsuarios()
