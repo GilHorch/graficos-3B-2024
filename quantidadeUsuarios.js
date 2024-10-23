@@ -1,4 +1,4 @@
-import { getCSS } from "./common"
+import { getCSS } from "common.js"
 
 async function quantidadeUsuarios() {
     const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json'
@@ -21,7 +21,8 @@ async function quantidadeUsuarios() {
 
     const layout={
         //cor de fundo do gráfico
-        plot_bgcolor:getCSS('--bg-color')
+        plot_bgcolor:getCSS('--bg-color'),
+        paper_bgcolor:getCSS('--bg-color')
     }
     const grafico = document.createElement('div')//cria uma div
     grafico.className = 'grafico'//cria aclasse para a div
