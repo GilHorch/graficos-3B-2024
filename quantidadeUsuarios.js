@@ -22,7 +22,15 @@ async function quantidadeUsuarios() {
     const layout={
         //cor de fundo do gráfico
         plot_bgcolor:getCSS('--bg-color'),
-        paper_bgcolor:getCSS('--bg-color')
+        paper_bgcolor:getCSS('--bg-color'),
+        title:{
+            text:'Redes sociais com mais usuários no mundo',
+            x:0,
+            font:{
+                color:getCSS('--primary-color'),
+                family:getCSS('--font')
+            }
+        }
     }
     const grafico = document.createElement('div')//cria uma div
     grafico.className = 'grafico'//cria aclasse para a div
