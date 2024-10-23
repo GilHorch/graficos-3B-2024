@@ -28,9 +28,13 @@ async function quantidadeUsuarios() {
             x:0,
             font:{
                 color:getCSS('--primary-color'),
-                family:getCSS('--font')
+                family:getCSS('--font'),
+                size: 30
             }
-        }
+            
+        },
+        xaxis:{  tilte:{text:'Nome das redes'} },
+        yaxis:{  tilte:{text:'Nome das redes'} }
     }
     const grafico = document.createElement('div')//cria uma div
     grafico.className = 'grafico'//cria aclasse para a div
