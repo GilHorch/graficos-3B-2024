@@ -35,7 +35,7 @@ async function quantidadeUsuarios() {
         },
         xaxis: {
             tilte: {
-                text: 'Nome das redes',
+                text: 'Bilhões de usuaros ativos',
                 font: {
                     color: getCSS('--primary-color'),
                     family: getCSS('--font'),
