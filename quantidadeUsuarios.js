@@ -20,7 +20,6 @@ async function quantidadeUsuarios() {
     ]
 
     const layout = {
-        //cor de fundo do gráfico
         plot_bgcolor: getCSS('--bg-color'),
         paper_bgcolor: getCSS('--bg-color'),
         title: {
@@ -31,7 +30,6 @@ async function quantidadeUsuarios() {
                 family: getCSS('--font'),
                 size: 30
             }
-
         },
         xaxis: {
             tilte: {
