@@ -1,4 +1,4 @@
-import { getCSS } from "./common"
+import { getCSS, tickConfig } from "./common"
 
 async function quantidadeUsuarios() {
     const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json'
@@ -32,8 +32,9 @@ async function quantidadeUsuarios() {
             }
         },
         xaxis: {
+            tickfont: tickConfig,
             tilte: {
-                text: 'Bilhões de usuaros ativos',
+                text: 'nome das redes sociais',
                 font: {
                     color: getCSS('--primary-color'),
                     family: getCSS('--font'),
@@ -42,8 +43,9 @@ async function quantidadeUsuarios() {
             },
         },
         yaxis: {
+            tickfont: tickConfig,
             tilte: {
-                text: 'Nome das redes',
+                text: 'Bilhoes de usuarios ativos',
                 font: {
                     color: getCSS('--primary-color'),
                     family: getCSS('--font'),
